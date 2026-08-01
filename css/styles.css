@@ -15,7 +15,7 @@
   --white: #ffffff;
   --max: 68rem;
   --narrow: 40rem;
-  --content: 42rem;
+  --content: 36rem;
   --font-display: "Bricolage Grotesque", Georgia, serif;
   --font-body: "Figtree", "Segoe UI", sans-serif;
   --radius: 0.35rem;
@@ -459,8 +459,8 @@ button:focus-visible {
 .module-link,
 .course-link {
   display: grid;
-  gap: 0.35rem;
-  padding: 1.15rem 1.25rem;
+  gap: 0.45rem;
+  padding: 1.35rem 1.2rem 1.45rem;
   background: var(--white);
   border: 1px solid rgba(44, 54, 64, 0.1);
   border-left: 4px solid var(--teal-500);
