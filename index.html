@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>INSA — Gümnaasiumi inseneeria valikkursused</title>
+    <meta
+      name="description"
+      content="INSA gümnaasiumi inseneeria valikkursuste materjalid: esitlused ja õpilase töövihikud."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Mine sisu juurde</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="logo" href="#/" data-nav aria-label="INSA avaleht">INSA</a>
+        <nav class="nav" aria-label="Põhinavigatsioon">
+          <a href="#/moodulid" data-nav>Moodulid</a>
+          <a href="#/meeskond" data-nav>Meeskond</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- LANDING -->
+      <section id="view-home" class="view is-active" aria-label="Avaleht">
+        <section class="hero">
+          <div class="hero-bg" aria-hidden="true">
+            <div class="hero-grid"></div>
+            <div class="hero-orb hero-orb--teal"></div>
+            <div class="hero-orb hero-orb--amber"></div>
+            <svg class="hero-blueprint" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="80" y="90" width="280" height="180" rx="4" />
+                <circle cx="520" cy="180" r="70" />
+                <path d="M420 320 L560 420 L420 480 Z" />
+                <line x1="120" y1="320" x2="300" y2="480" />
+                <line x1="300" y1="320" x2="120" y2="480" />
+                <rect x="560" y="360" width="160" height="120" />
+                <circle cx="200" cy="180" r="28" />
+              </g>
+            </svg>
+          </div>
+          <div class="shell hero-content">
+            <p class="brand-mark animate-in">INSA</p>
+            <h1 class="animate-in animate-in--delay-1">Inseneeria gümnaasiumile</h1>
+            <p class="hero-lead animate-in animate-in--delay-2">
+              Gümnaasiumi inseneeria valikkursuste materjalid — esitlused ja õpilase töövihikud ühes kohas.
+            </p>
+            <div class="hero-cta animate-in animate-in--delay-3">
+              <a class="btn btn-primary" href="#/moodulid" data-nav>Vaata mooduleid</a>
+              <a class="btn btn-ghost" href="#/tutvustus" data-nav>Mis on INSA?</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="tutvustus" class="section intro-section">
+          <div class="shell narrow">
+            <p class="eyebrow">Tutvustus</p>
+            <h2>Gümnaasiumi inseneeria valikkursused</h2>
+            <p>
+              INSA koondab <strong>gümnaasiumi inseneeria valikkursuste</strong> õppematerjale.
+              Siit leiad iga kursuse kohta tervikliku esitluse (PowerPoint) ja õpilase töövihiku —
+              mõeldud gümnaasiumiõpilastele, kes avastavad inseneeriat, tootmist, disaini ja STEM-i.
+            </p>
+          </div>
+        </section>
+
+        <section class="section modules-preview" id="moodulid-preview">
+          <div class="shell">
+            <div class="section-head">
+              <p class="eyebrow">Moodulid</p>
+              <h2>Kolm teekonda</h2>
+              <p class="section-lead">Vali moodul ja ava kursuse materjalid.</p>
+            </div>
+            <div class="module-list" id="home-modules"></div>
+          </div>
+        </section>
+
+        <section class="section team-section" id="meeskond">
+          <div class="shell">
+            <div class="section-head">
+              <p class="eyebrow">Meeskond</p>
+              <h2>Kes materjalid kokku panid</h2>
+            </div>
+            <ul class="team-list" id="team-list"></ul>
+          </div>
+        </section>
+      </section>
+
+      <!-- MODULE LIST -->
+      <section id="view-modules" class="view" aria-label="Moodulid" hidden>
+        <div class="shell page-pad">
+          <nav class="breadcrumb" aria-label="Asukoht">
+            <a href="#/" data-nav>Avaleht</a>
+            <span aria-hidden="true">/</span>
+            <span>Moodulid</span>
+          </nav>
+          <header class="page-head">
+            <h1>Moodulid</h1>
+            <p>Gümnaasiumi inseneeria valikkursused kolme moodulina.</p>
+          </header>
+          <div class="module-list" id="modules-list"></div>
+        </div>
+      </section>
+
+      <!-- SINGLE MODULE -->
+      <section id="view-module" class="view" aria-label="Mooduli kursused" hidden>
+        <div class="shell page-pad">
+          <nav class="breadcrumb" aria-label="Asukoht" id="module-breadcrumb"></nav>
+          <header class="page-head">
+            <h1 id="module-title"></h1>
+            <p id="module-tagline"></p>
+          </header>
+          <div class="course-list" id="course-list"></div>
+        </div>
+      </section>
+
+      <!-- COURSE MATERIALS -->
+      <section id="view-course" class="view" aria-label="Kursuse materjalid" hidden>
+        <div class="shell page-pad">
+          <nav class="breadcrumb" aria-label="Asukoht" id="course-breadcrumb"></nav>
+          <header class="page-head">
+            <h1 id="course-title"></h1>
+            <p id="course-description"></p>
+          </header>
+          <div class="materials" id="materials"></div>
+        </div>
+      </section>
+    </main>
+
+    <section class="funder" aria-labelledby="funder-heading">
+      <div class="shell funder-inner">
+        <p id="funder-heading" class="funder-text">
+          Projekt on toetatud Inseneeriakadeemia MATIK koolide projektist
+        </p>
+        <ul class="funder-logos">
+          <li>
+            <img
+              class="funder-logo funder-logo--eu"
+              src="assets/logos/eu-kaasrahastanud-kaksiklogo.jpg"
+              alt="Kaasrahastanud Euroopa Liit — Euroopa Liidu ja Eesti kaksiklogo"
+              width="320"
+              height="120"
+              decoding="async"
+            />
+          </li>
+          <li>
+            <img
+              class="funder-logo funder-logo--ia"
+              src="assets/logos/inseneriakadeemia-logo.svg"
+              alt="Inseneriakadeemia logo"
+              width="180"
+              height="78"
+              decoding="async"
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p><strong>INSA</strong> — gümnaasiumi inseneeria valikkursused</p>
+        <p class="footer-credit">© 2026 INSA · Arendaja: Yrgel</p>
+      </div>
+    </footer>
+
+    <script src="data/courses.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
