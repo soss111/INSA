@@ -231,7 +231,7 @@ button:focus-visible {
 /* Hero — one composition, brand-first, full-bleed */
 .hero {
   position: relative;
-  min-height: min(68vh, 36rem);
+  min-height: min(48vh, 26rem);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -292,7 +292,7 @@ button:focus-visible {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 3.5rem 0 3rem;
+  padding: 2.5rem 0 2.25rem;
   max-width: min(100% - 2rem, 40rem);
   margin-left: max(calc((100% - var(--max)) / 2), 1rem);
   margin-right: auto;
@@ -843,11 +843,11 @@ body.embed-expanded-open {
 
 @media (max-width: 640px) {
   .hero {
-    min-height: min(62vh, 32rem);
+    min-height: min(44vh, 24rem);
   }
 
   .hero-content {
-    padding: 3.25rem 0 2.5rem;
+    padding: 2.25rem 0 2rem;
   }
 
   .brand-mark {
