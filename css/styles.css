@@ -231,7 +231,7 @@ button:focus-visible {
 /* Hero — one composition, brand-first, full-bleed */
 .hero {
   position: relative;
-  min-height: min(92vh, 52rem);
+  min-height: min(68vh, 36rem);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -292,35 +292,35 @@ button:focus-visible {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 5rem 0 4rem;
-  max-width: 36rem;
+  padding: 3.5rem 0 3rem;
+  max-width: 34rem;
   margin-left: max(calc((100% - var(--max)) / 2), 1rem);
   margin-right: auto;
-  width: min(100% - 2rem, 36rem);
+  width: min(100% - 2rem, 34rem);
 }
 
 .brand-mark {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.55rem;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(3rem, 10vw, 5.5rem);
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
   line-height: 0.95;
   letter-spacing: 0.02em;
   color: var(--amber-400);
 }
 
 .hero h1 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
   line-height: 1.15;
   color: var(--white);
 }
 
 .hero-lead {
-  margin: 0 0 1.75rem;
-  font-size: 1.1rem;
+  margin: 0 0 1.35rem;
+  font-size: 1.05rem;
   color: rgba(244, 247, 249, 0.88);
   max-width: 28rem;
 }
@@ -842,12 +842,16 @@ body.embed-expanded-open {
 }
 
 @media (max-width: 640px) {
+  .hero {
+    min-height: min(62vh, 32rem);
+  }
+
   .hero-content {
-    padding: 4.5rem 0 3rem;
+    padding: 3.25rem 0 2.5rem;
   }
 
   .brand-mark {
-    font-size: clamp(2.6rem, 16vw, 3.5rem);
+    font-size: clamp(2.4rem, 14vw, 3.25rem);
   }
 
   .hero-blueprint {
