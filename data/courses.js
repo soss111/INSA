@@ -78,8 +78,8 @@ window.INSA_DATA = {
           id: "stem-avastusretk",
           title: "Põnev avastamisretk STEM maailma",
           description: "Sissejuhatus STEM-i ja Andmekogur-satelliidi maailma.",
-          presentationId: "PLACEHOLDER_PRESENTATION_ID",
-          workbookId: "PLACEHOLDER_WORKBOOK_ID",
+          presentationId: "13YPIbg4kZM6Kq4TeA-yJlyo_FEOBTfxk",
+          workbookId: "1i2ypjjCyUOqGrKRfPqnbAc7955JIX6NE",
         },
         {
           id: "andmekogur-sateliit-mehhatroonika",
