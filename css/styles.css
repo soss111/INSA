@@ -13,9 +13,9 @@
   --amber-400: #e8b84a;
   --amber-100: #f8edcf;
   --white: #ffffff;
-  --max: 68rem;
+  --max: 72rem;
   --narrow: 40rem;
-  --content: 36rem;
+  --content: var(--max);
   --font-display: "Bricolage Grotesque", Georgia, serif;
   --font-body: "Figtree", "Segoe UI", sans-serif;
   --radius: 0.35rem;
@@ -293,10 +293,10 @@ button:focus-visible {
   position: relative;
   z-index: 1;
   padding: 3.5rem 0 3rem;
-  max-width: 34rem;
+  max-width: min(100% - 2rem, 40rem);
   margin-left: max(calc((100% - var(--max)) / 2), 1rem);
   margin-right: auto;
-  width: min(100% - 2rem, 34rem);
+  width: min(100% - 2rem, 40rem);
 }
 
 .brand-mark {
