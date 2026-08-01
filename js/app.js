@@ -70,13 +70,19 @@
         const portfolio = url
           ? `<a class="portfolio" href="${escapeHtml(url)}" target="_blank" rel="noopener">Õpetajaportfoolio</a>`
           : "";
+        const bio = t.bio
+          ? `<p class="team-bio">${escapeHtml(t.bio)}</p>`
+          : "";
         return `
       <li>
-        <div class="team-info">
-          <span class="name">${escapeHtml(t.name)}</span>
-          ${portfolio}
+        <div class="team-head">
+          <div class="team-info">
+            <span class="name">${escapeHtml(t.name)}</span>
+            ${portfolio}
+          </div>
+          <span class="role">${escapeHtml(t.role)}</span>
         </div>
-        <span class="role">${escapeHtml(t.role)}</span>
+        ${bio}
       </li>`;
       })
       .join("");
