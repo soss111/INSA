@@ -57,7 +57,7 @@ window.INSA_DATA = {
           id: "kasutajakeskne-disain",
           title: "Kasutajakeskne disain ja prototüüpimine",
           description: "Kasutajast lähtuv disainiprotsess ja prototüüpide loomine.",
-          presentationId: "PLACEHOLDER_PRESENTATION_ID",
+          presentationId: "1pPw7z90CAkn1vRHmQ7thl_73YnEVL4at",
           workbookId: "PLACEHOLDER_WORKBOOK_ID",
         },
         {
