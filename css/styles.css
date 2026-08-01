@@ -433,6 +433,10 @@ button:focus-visible {
   border-block: 1px solid rgba(26, 138, 142, 0.12);
 }
 
+.intro-copy {
+  max-width: 42rem;
+}
+
 .intro-section h2 {
   margin-bottom: 1rem;
 }
