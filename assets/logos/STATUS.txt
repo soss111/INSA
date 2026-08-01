@@ -1,0 +1,21 @@
+﻿Logo assets status — 2026-08-01 (updated)
+
+Directory: C:\Users\LauriSoosaar\insa-ee\assets\logos
+
+SITE USAGE (index.html)
+- EU twin logo: eu-kaasrahastanud-kaksiklogo.jpg (official RTK horizontal color)
+- Inseneriakadeemia: inseneriakadeemia-logo.svg (wordmark)
+
+FIX NOTES
+- eu-kaasrahastanud-kaksiklogo.svg previously used Windows-1252 bytes in a comment
+  (0x96 en-dash, 0xDC U), so UTF-8 XML parse failed and <img> showed nothing.
+  SVG rewritten as UTF-8; page now prefers the official JPG.
+- inseneriakadeemia-logo.png / -alt2.png are Harno promo slides (not footer logos).
+  Do not point the footer at those PNGs.
+
+PRIMARY FILES
+- eu-kaasrahastanud-kaksiklogo.jpg — official EST horizontal color RGB (use this)
+- eu-kaasrahastanud-kaksiklogo.png — dark-background variant (avoid on white strip)
+- eu-kaasrahastanud-kaksiklogo.svg — UTF-8 fallback recreation
+- inseneriakadeemia-logo.svg — footer wordmark
+- inseneriakadeemia-logo.png / alt2 — full-page graphics, not logos
