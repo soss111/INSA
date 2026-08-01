@@ -15,6 +15,7 @@
   --white: #ffffff;
   --max: 68rem;
   --narrow: 40rem;
+  --content: 42rem;
   --font-display: "Bricolage Grotesque", Georgia, serif;
   --font-body: "Figtree", "Segoe UI", sans-serif;
   --radius: 0.35rem;
@@ -398,7 +399,7 @@ button:focus-visible {
 
 .section-head {
   margin-bottom: 2rem;
-  max-width: 36rem;
+  max-width: var(--content);
 }
 
 .eyebrow {
@@ -434,11 +435,7 @@ button:focus-visible {
 }
 
 .intro-copy {
-  max-width: 42rem;
-}
-
-.intro-section h2 {
-  margin-bottom: 1rem;
+  max-width: var(--content);
 }
 
 .intro-section p {
@@ -456,7 +453,7 @@ button:focus-visible {
 .course-list {
   display: grid;
   gap: 0.85rem;
-  max-width: 42rem;
+  max-width: var(--content);
 }
 
 .module-link,
@@ -511,6 +508,7 @@ button:focus-visible {
   padding: 0;
   display: grid;
   gap: 0;
+  max-width: var(--content);
   border-top: 1px solid rgba(44, 54, 64, 0.12);
 }
 
@@ -572,7 +570,6 @@ button:focus-visible {
 
 .team-list .team-bio {
   margin: 0;
-  max-width: 42rem;
   font-size: 0.98rem;
   line-height: 1.55;
   color: var(--slate-800);
