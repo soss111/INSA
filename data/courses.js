@@ -36,7 +36,7 @@ window.INSA_DATA = {
           id: "targa-maja-lahendused",
           title: "Targa maja lihtsad lahendused",
           description: "Praktilised nutikodu ja automaatika ideed.",
-          presentationId: "PLACEHOLDER_PRESENTATION_ID",
+          presentationId: "1hFvcx0PXsStk_uKYE_pPa8BN1_-7gd68",
           workbookId: "PLACEHOLDER_WORKBOOK_ID",
         },
       ],
