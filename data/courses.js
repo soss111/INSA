@@ -100,7 +100,11 @@ window.INSA_DATA = {
   ],
   team: [
     // portfolioUrl: lisa õpetajaportfoolio URL; tühi string peidab lingi
-    { name: "Lauri Soosaar", role: "Inseneeriaõpetaja", portfolioUrl: "" },
+    {
+      name: "Lauri Soosaar",
+      role: "Inseneeriaõpetaja",
+      portfolioUrl: "https://laurisoosaar.wixsite.com/mysite",
+    },
     { name: "Rasmus Kits", role: "Inseneeriaõpetaja", portfolioUrl: "" },
     { name: "Liis Proos", role: "Karjäärispetsialist", portfolioUrl: "" },
     { name: "Holger Bremen", role: "Inseneeriaõpetaja", portfolioUrl: "" },
