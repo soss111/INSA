@@ -30,6 +30,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -45,6 +46,20 @@ body {
     radial-gradient(ellipse 80% 50% at 100% 0%, rgba(26, 138, 142, 0.08), transparent 55%),
     radial-gradient(ellipse 60% 40% at 0% 100%, rgba(212, 160, 23, 0.07), transparent 50%),
     linear-gradient(180deg, var(--slate-50) 0%, #eef3f5 45%, var(--slate-50) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 #main {
@@ -128,8 +143,21 @@ a:hover {
   text-decoration: none;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a[aria-current="page"] {
   color: var(--teal-700);
+}
+
+.nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.28em;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--amber-400);
+  outline-offset: 3px;
 }
 
 /* Views */
@@ -420,6 +448,7 @@ a:hover {
 .course-list {
   display: grid;
   gap: 0.85rem;
+  max-width: 42rem;
 }
 
 .module-link,
@@ -546,6 +575,11 @@ a:hover {
 .breadcrumb a {
   font-weight: 600;
   text-decoration: none;
+  color: var(--teal-700);
+}
+
+.breadcrumb a:hover {
+  color: var(--teal-900);
 }
 
 .page-head {
@@ -593,20 +627,30 @@ a:hover {
 .embed-wrap {
   position: relative;
   aspect-ratio: 16 / 10;
-  background:
-    repeating-linear-gradient(
-      -45deg,
-      var(--slate-50),
-      var(--slate-50) 12px,
-      #e8eef1 12px,
-      #e8eef1 24px
-    );
+  background: var(--slate-50);
+}
+
+.embed-wrap::before {
+  content: "Laadin eelvaadet…";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--slate-600);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .embed-wrap iframe {
+  position: relative;
+  z-index: 1;
+  display: block;
   width: 100%;
   height: 100%;
   border: 0;
+  background: var(--white);
 }
 
 .embed-wrap:fullscreen,

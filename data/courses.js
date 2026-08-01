@@ -71,26 +71,26 @@ window.INSA_DATA = {
     },
     {
       id: "andmekogur-sateliit",
-      title: "Andmekogur-sateliit",
+      title: "Andmekogur-satelliit",
       tagline: "STEM avastusretk satelliitprojektini",
       courses: [
         {
           id: "stem-avastusretk",
           title: "Põnev avastamisretk STEM maailma",
-          description: "Sissejuhatus STEM-i ja Andmekogur-sateliidi maailma.",
+          description: "Sissejuhatus STEM-i ja Andmekogur-satelliidi maailma.",
           presentationId: "PLACEHOLDER_PRESENTATION_ID",
           workbookId: "PLACEHOLDER_WORKBOOK_ID",
         },
         {
           id: "andmekogur-sateliit-mehhatroonika",
-          title: "Andmekogur-sateliit mehhatroonika",
+          title: "Andmekogur-satelliit mehhatroonika",
           description: "Satelliidi mehhatroonika, andurid ja juhtimine.",
           presentationId: "PLACEHOLDER_PRESENTATION_ID",
           workbookId: "PLACEHOLDER_WORKBOOK_ID",
         },
         {
           id: "andmekogur-sateliit-voistlus",
-          title: "Andmekogur-sateliit võistlus",
+          title: "Andmekogur-satelliit võistlus",
           description: "Võistluseks valmistumine ja projektitöö.",
           presentationId: "PLACEHOLDER_PRESENTATION_ID",
           workbookId: "PLACEHOLDER_WORKBOOK_ID",
@@ -102,8 +102,8 @@ window.INSA_DATA = {
     // portfolioUrl: lisa õpetajaportfoolio URL; tühi string peidab lingi
     { name: "Lauri Soosaar", role: "Inseneeriaõpetaja", portfolioUrl: "" },
     { name: "Rasmus Kits", role: "Inseneeriaõpetaja", portfolioUrl: "" },
-    { name: "Liis Proos", role: "karjäärispetsialist", portfolioUrl: "" },
+    { name: "Liis Proos", role: "Karjäärispetsialist", portfolioUrl: "" },
     { name: "Holger Bremen", role: "Inseneeriaõpetaja", portfolioUrl: "" },
-    { name: "Kristina Ruder", role: "õpetaja", portfolioUrl: "" },
+    { name: "Kristina Ruder", role: "Õpetaja", portfolioUrl: "" },
   ],
 };

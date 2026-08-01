@@ -17,22 +17,6 @@
     return `https://drive.google.com/file/d/${fileId}/preview`;
   }
 
-  function slidesPreview(fileId) {
-    return `https://docs.google.com/presentation/d/${fileId}/embed?start=false&loop=false&delayms=3000`;
-  }
-
-  function slidesOpen(fileId) {
-    return `https://docs.google.com/presentation/d/${fileId}/view`;
-  }
-
-  function docsPreview(fileId) {
-    return `https://docs.google.com/document/d/${fileId}/preview`;
-  }
-
-  function docsOpen(fileId) {
-    return `https://docs.google.com/document/d/${fileId}/view`;
-  }
-
   function driveOpen(fileId) {
     return `https://drive.google.com/file/d/${fileId}/view`;
   }
@@ -145,14 +129,14 @@
           <h2>Esitlus (PowerPoint)</h2>
           <div class="material-actions">
             <button type="button" class="btn btn-secondary" data-fullscreen-target="presentation-embed">Täisekraan</button>
-            <a class="btn btn-outline" href="${slidesOpen(course.presentationId)}" target="_blank" rel="noopener">Ava Drive’is</a>
+            <a class="btn btn-outline" href="${driveOpen(course.presentationId)}" target="_blank" rel="noopener">Ava Drive’is</a>
           </div>
         </header>
         <div class="embed-wrap" id="presentation-embed">
           <button type="button" class="embed-fs-exit" data-exit-fullscreen hidden>Välju täisekraanist</button>
           <iframe
             title="Esitluse eelvaade"
-            src="${slidesPreview(course.presentationId)}"
+            src="${drivePreview(course.presentationId)}"
             allow="autoplay; fullscreen"
             allowfullscreen
             loading="lazy"
@@ -182,7 +166,7 @@
           <h2>Õpilase töövihik (.doc)</h2>
           <div class="material-actions">
             <button type="button" class="btn btn-secondary" data-fullscreen-target="workbook-embed">Täisekraan</button>
-            <a class="btn btn-outline" href="${docsOpen(course.workbookId)}" target="_blank" rel="noopener">Ava</a>
+            <a class="btn btn-outline" href="${driveOpen(course.workbookId)}" target="_blank" rel="noopener">Ava</a>
             <a class="btn btn-outline" href="${driveDownload(course.workbookId)}" target="_blank" rel="noopener">Laadi alla</a>
           </div>
         </header>
@@ -192,7 +176,7 @@
             <button type="button" class="embed-fs-exit" data-exit-fullscreen hidden>Välju täisekraanist</button>
             <iframe
               title="Töövihiku eelvaade"
-              src="${docsPreview(course.workbookId)}"
+              src="${drivePreview(course.workbookId)}"
               allow="autoplay; fullscreen"
               allowfullscreen
               loading="lazy"
@@ -351,10 +335,25 @@
     });
   }
 
+  function updateNavCurrent(path) {
+    document.querySelectorAll(".nav a[data-nav]").forEach((link) => {
+      const target = (link.getAttribute("href") || "").replace(/^#/, "") || "/";
+      let current = false;
+      if (target === "/moodulid") {
+        current = path === "/moodulid" || path.startsWith("/moodul/");
+      } else if (target === "/meeskond") {
+        current = path === "/meeskond";
+      }
+      if (current) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
   function route() {
     const hash = location.hash || "#/";
     const path = hash.replace(/^#/, "") || "/";
     leaveAllFullscreen();
+    updateNavCurrent(path);
 
     if (path === "/" || path === "") {
       showView("view-home");
