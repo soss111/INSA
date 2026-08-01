@@ -438,9 +438,13 @@ button:focus-visible {
 }
 
 .intro-section p {
-  margin: 0;
+  margin: 0 0 1rem;
   font-size: 1.12rem;
   color: var(--slate-800);
+}
+
+.intro-section p:last-child {
+  margin-bottom: 0;
 }
 
 /* Interactive lists — light containers for navigation */
